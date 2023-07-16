@@ -27,7 +27,7 @@ const dbUrl = process.env.DB_URL;
 const MongoStore = require('connect-mongo')(session);
 
 
-mongoose.connect( dbUrl || 'mongodb://127.0.0.1:27017/yelp-camp');
+mongoose.connect( dbUrl || 'mongodb://127.0.0.1/yelp-camp');
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error"));
 db.once("open", ()=>{
@@ -45,7 +45,7 @@ app.use(mongoSanitize());
 
 
 const store = new MongoStore({
-    url : "mongodb://127.0.0.1:27017/yelp-camp",
+    url : dbUrl,
     secret : "myfirstsecretforsession",
     touchAfter : 24 * 60 * 60
 });
