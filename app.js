@@ -137,8 +137,8 @@ app.use((req, res, next)=>{
 
 
 
-app.use("/campgrounds", campgrounds);
-app.use("/campgrounds/:id/reviews", reviews);
+app.use("/cafes", campgrounds);
+app.use("/cafes/:id/reviews", reviews);
 app.use("/", userRoute);
 app.use(express.static(path.join(__dirname,"public")));
 

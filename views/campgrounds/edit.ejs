@@ -3,7 +3,7 @@
     <div class="row">
         <h1 class="text-center">Edit Campground</h1>
         <div class="col-md-6 offset-md-3">
-            <form novalidate class="needs-validation" action="/campgrounds/<%=campground._id%>?_method=PUT" method="post" enctype="multipart/form-data">
+            <form novalidate class="needs-validation" action="/cafes/<%=campground._id%>?_method=PUT" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-lable" for="title">Title</label>
                     <input class="form-control" type="text" id="title" name="campground[title]"  value="<%=campground.title%>" required>
@@ -31,19 +31,6 @@
                 </div>
                 </div>
 
-                <div class="mb-3">
-                    <label class="form-lable" for="price">Campground Price</label>
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
-                        </div>
-                        <input   required type="text" name="campground[price]" class="form-control" placeholder="0"
-                            aria-label="price" aria-describedby="price" id="price" value="<%=campground.price%>">
-                            <div class="valid-feedback">
-                                Looks Good!
-                            </div>
-                    </div>
-                </div>
 
                 <div class="mb-3">
                     <label class="form-lable" for="description">Description</label>
@@ -67,6 +54,6 @@
                     <button class="btn btn-info">Update Campground</button>
                 </div>
             </form>
-            <a href="/campgrounds">All Campgrounds</a>
+            <a href="/cafes">All Campgrounds</a>
         </div>
     </div>

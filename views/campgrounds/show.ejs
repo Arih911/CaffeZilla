@@ -37,13 +37,12 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item text-muted"><%=campground.location%></li>
               <li class="list-group-item">Submitted By - <%=campground.author.username%></li>
-              <li class="list-group-item">$ <%=campground.price%>/night</li>
               
             </ul>
             <% if(currentUser && campground.author.equals(currentUser._id)) { %>
               <div class="card-body">
-                <a class="card-link btn btn-info" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
-                <form class="d-inline" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="post">
+                <a class="card-link btn btn-info" href="/cafes/<%=campground._id%>/edit">Edit</a>
+                <form class="d-inline" action="/cafes/<%=campground._id%>?_method=DELETE" method="post">
                   <button class="card-link btn btn-danger">DELETE</button>
                 </form>
               </div>
@@ -56,7 +55,7 @@
           <div class="col-6">
       <div class="mb-3" id="map" ></div>
       <% if(currentUser){ %>
-        <form action="/campgrounds/<%=campground._id%>/reviews" class="mb-3 needs-validation" method="POST" novalidate>
+        <form action="/cafes/<%=campground._id%>/reviews" class="mb-3 needs-validation" method="POST" novalidate>
           <div mb-3>
           <h3>Leave a Review</h3>
           <fieldset class="starability-checkmark">
@@ -92,7 +91,7 @@
           </p>
           <p class="card-text">Says : <%=review.body %></p>         
           <% if(currentUser && review.author.equals(currentUser._id)) { %>       
-          <form action="/campgrounds/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="post">
+          <form action="/cafes/<%=campground._id%>/reviews/<%=review._id%>?_method=DELETE" method="post">
             <button class="btn btn-sm btn-danger">
               Delete
             </button>

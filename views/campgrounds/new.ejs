@@ -1,8 +1,8 @@
 <% layout("/layout/Boilerplate") %>
     <div class="row">
-        <h4 class="text-center">New Campground</h4>
+        <h4 class="text-center">New Cafe</h4>
         <div class="col-md-6 offset-md-3">
-            <form action="/campgrounds" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+            <form action="/cafes" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-lable" for="title">Title</label>
                     <input class="form-control" type="text" id="title" name="campground[title]" required>
@@ -28,21 +28,7 @@
                         <span class="form-file-button">Browse</span>
                     </label></div>
                 </div>
-                
-                <div class="mb-3">
-                    <label class="form-lable" for="price">Campground Price</label>
-                    <div class="input-group ">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">$</span>
-                        </div>
-                        <input type="text" name="campground[price]" class="form-control" placeholder="0"
-                            aria-label="price" aria-describedby="price" id="price" required>
-
-                    </div>
-                    <div class="valid-feedback">
-                        Looks Good!
-                    </div>
-                </div>
+        
 
                 <div class="mb-3">
                     <label class="form-lable" for="description">Description</label>
@@ -54,9 +40,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <button class="btn btn-success">Add Campground</button>
+                    <button class="btn btn-success">Add Cafe</button>
                 </div>
             </form>
-            <a href="/campgrounds">All Campgrounds</a>
+            <a href="/cafes">All Cafes</a>
         </div>
     </div>
