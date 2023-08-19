@@ -1,7 +1,7 @@
 <% layout("/layout/Boilerplate") %>
 
     <div class="row">
-        <h1 class="text-center">Edit Campground</h1>
+        <h1 class="text-center">Edit Cafe</h1>
         <div class="col-md-6 offset-md-3">
             <form novalidate class="needs-validation" action="/cafes/<%=campground._id%>?_method=PUT" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <button class="btn btn-info">Update Campground</button>
+                    <button class="btn btn-info">Update Cafe</button>
                 </div>
             </form>
             <a href="/cafes">All Campgrounds</a>
