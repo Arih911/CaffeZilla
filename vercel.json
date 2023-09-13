@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "CaffeZilla",
+    "name": "GenZ",
     "builds": [{ "src": "app.js", "use": "@vercel/node" }],
     "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
   }
